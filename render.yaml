@@ -2,6 +2,7 @@ services:
   - type: web
     name: fares-portfolio
     runtime: node
+    plan: free
     buildCommand: npm run render-build
     startCommand: npm start
     envVars:
