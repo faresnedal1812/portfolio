@@ -1,0 +1,248 @@
+/* ============================================
+   DESIGN SYSTEM — Dark Premium Portfolio
+   ============================================ */
+
+:root {
+  /* Colors */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #111118;
+  --bg-card: rgba(17, 17, 24, 0.8);
+  --bg-glass: rgba(255, 255, 255, 0.03);
+  --bg-glass-hover: rgba(255, 255, 255, 0.06);
+  
+  --text-primary: #e8e8ef;
+  --text-secondary: #8888a0;
+  --text-muted: #55556a;
+  
+  --accent-blue: #4f8fff;
+  --accent-purple: #8b5cf6;
+  --accent-cyan: #06d6a0;
+  --accent-pink: #f472b6;
+  
+  --gradient-primary: linear-gradient(135deg, #4f8fff 0%, #8b5cf6 50%, #06d6a0 100%);
+  --gradient-accent: linear-gradient(135deg, #4f8fff 0%, #8b5cf6 100%);
+  --gradient-card: linear-gradient(145deg, rgba(79, 143, 255, 0.08) 0%, rgba(139, 92, 246, 0.05) 100%);
+  
+  --border-color: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(79, 143, 255, 0.3);
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 64px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 40px rgba(79, 143, 255, 0.15);
+  
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Spacing */
+  --section-padding: 100px 0;
+  --container-width: 1200px;
+  --container-padding: 0 24px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+}
+
+/* ============ RESET ============ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* ============ UTILITIES ============ */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+.section {
+  padding: var(--section-padding);
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass card */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  transition: var(--transition-base);
+}
+
+.glass-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: var(--radius-xl);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: var(--transition-base);
+  letter-spacing: 0.3px;
+}
+
+.btn-primary {
+  background: var(--gradient-accent);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(79, 143, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(79, 143, 255, 0.4);
+}
+
+.btn-outline {
+  border: 1.5px solid var(--border-hover);
+  color: var(--accent-blue);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: rgba(79, 143, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Scroll animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-blue);
+  border-radius: 3px;
+}
+
+/* Background decoration */
+.bg-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.07;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 64px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 40px;
+  }
+}

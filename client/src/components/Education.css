@@ -1,0 +1,77 @@
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.education-card {
+  padding: 32px;
+  display: flex;
+  gap: 20px;
+}
+
+.edu-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.edu-icon {
+  font-size: 1.6rem;
+}
+
+.edu-period {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.edu-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.edu-institution {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.edu-description {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.edu-grade {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border: 1px solid;
+  border-radius: var(--radius-xl);
+}
+
+@media (max-width: 768px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

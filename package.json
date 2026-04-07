@@ -1,0 +1,16 @@
+{
+  "name": "fares-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Fares Nedal Abu Elawn",
+  "scripts": {
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build",
+    "start": "cd server && node index.js",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "render-build": "cd client && npm install && npm run build && cd ../server && npm install"
+  },
+  "keywords": ["portfolio", "mern", "react"],
+  "author": "Fares Nedal Abu Elawn",
+  "license": "MIT"
+}
