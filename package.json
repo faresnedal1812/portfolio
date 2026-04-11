@@ -16,5 +16,8 @@
     "react"
   ],
   "author": "Fares Nedal Abu Elawn",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  }
 }
