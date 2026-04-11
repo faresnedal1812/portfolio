@@ -59,7 +59,7 @@ app.get("/api/health", (req, res) => {
 });
 
 // Serve React app in production
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production" || process.env.RENDER === "true") {
   const clientBuild = path.join(__dirname, "..", "client", "dist");
   app.use(express.static(clientBuild));
 
