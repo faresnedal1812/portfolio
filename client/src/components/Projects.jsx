@@ -3,6 +3,17 @@ import "./Projects.css";
 
 const projects = [
   {
+    title: "Project Management System",
+    category: "backend",
+    description:
+      "Production-ready multi-tenant Project Management API built with Node.js, Express 5, and PostgreSQL. Features real-time updates via Socket.IO, background jobs with BullMQ, RBAC with 72+ permissions, Swagger docs, and Docker deployment on Render.",
+    tags: ["Node.js", "PostgreSQL", "Socket.IO", "BullMQ", "Docker", "Prisma"],
+    liveUrl:
+      "https://project-management-system-api-zqk2.onrender.com/api-docs/",
+    githubUrl: "https://github.com/faresnedal1812/project-management-system",
+    color: "#f59e0b",
+  },
+  {
     title: "Voice of Gaza",
     category: "fullstack",
     description:
